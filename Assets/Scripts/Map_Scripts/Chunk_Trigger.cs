@@ -16,8 +16,7 @@ public class Chunk_Trigger : MonoBehaviour
     if (col.CompareTag("Player"))
     {
         mc.currentChunk = targetMap; 
-    }
-        
+    }     
    }
 
    private void OnTriggerExit2D(Collider2D col) 
@@ -29,6 +28,5 @@ public class Chunk_Trigger : MonoBehaviour
             mc.currentChunk = null;
         }
      }
-    
    }
 }
