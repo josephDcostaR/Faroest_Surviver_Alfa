@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Map_Controller : MonoBehaviour
 {
-
-
     public List<GameObject> terrainCunks;
     public GameObject Player;
     public float checkerRadius;
