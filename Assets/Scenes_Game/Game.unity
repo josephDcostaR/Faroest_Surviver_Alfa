@@ -818,7 +818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &616064919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,12 +831,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea30b13d31c1c6488d78058412d4cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainCunks: []
+  terrainCunks:
+  - {fileID: 3593189021486957038, guid: 49607d1e2d95de94a93fa2739ac5d000, type: 3}
+  - {fileID: 3593189021486957038, guid: 9fd3446c6b0e1e54e81e62dac0c64386, type: 3}
+  - {fileID: 3593189021486957038, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
+  - {fileID: 3593189021486957038, guid: a9011bbc73d5dfc4d92072a3d8674e4d, type: 3}
   Player: {fileID: 365192911}
   checkerRadius: 0.2
+  noTerrainPosition: {x: 0, y: 0, z: 0}
   terrainMask:
     serializedVersion: 2
     m_Bits: 64
+  currentChunk: {fileID: 0}
+  spawnedChunks: []
+  maxOpDist: 40
+  optimizerCooldownDur: 1
 --- !u!4 &616064920
 Transform:
   m_ObjectHideFlags: 0
@@ -1035,7 +1044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1907674608
 Grid:
   m_ObjectHideFlags: 0
@@ -1064,32 +1073,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1914580402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3593189021486957038, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
-  m_PrefabInstance: {fileID: 3593189022325697628}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1914580405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914580402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ea30b13d31c1c6488d78058412d4cc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainCunks:
-  - {fileID: 3593189021486957038, guid: 49607d1e2d95de94a93fa2739ac5d000, type: 3}
-  - {fileID: 3593189021486957038, guid: 9fd3446c6b0e1e54e81e62dac0c64386, type: 3}
-  - {fileID: 3593189021486957038, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
-  Player: {fileID: 365192911}
-  checkerRadius: 0.2
-  terrainMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &1988259351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1231,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2050483502103730136, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050483502103730136, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
+      propertyPath: propSpawPoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593189021486957032, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
+      propertyPath: m_Size.x
+      value: 43.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593189021486957032, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
+      propertyPath: m_Size.y
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3593189021486957038, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
       propertyPath: m_Name
@@ -1256,7 +1251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3593189021486957038, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3593189021486957039, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
       propertyPath: m_RootOrder
@@ -1310,5 +1305,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.18
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2050483502103730136, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 53190eb81631e4e42aa195c1f278ee16, type: 3}

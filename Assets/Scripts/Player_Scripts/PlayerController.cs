@@ -9,9 +9,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed = 5.0f; 
-
-    Rigidbody2D rb;
-
+    public Rigidbody2D rb;
     public Vector2 moveDir;
    
     public float maxHealth;
