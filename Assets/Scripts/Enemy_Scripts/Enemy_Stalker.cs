@@ -6,16 +6,24 @@ using UnityEngine;
 public class Enemy_Stalker : MonoBehaviour
 {
 
+    [SerializeField]
+    public Enemy_Scriptable_Object enemyData;
+     float moveSpeed;
+    float maxHealth;
+    float currentHealth;
+    float damage;
     private Transform playerTransform;
 
-    public float damage;
-    public float moveSpeed;
 
 
 
     void Start()
     {
          playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        moveSpeed = enemyData.MoveSpeed;
+        maxHealth = enemyData.MaxHealth;
+        currentHealth = maxHealth;
+        damage = enemyData.Damage;
         
     }
 
@@ -29,23 +37,39 @@ public class Enemy_Stalker : MonoBehaviour
     {
         if(playerTransform != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, enemyData.MoveSpeed * Time.deltaTime);
         }
     }
 
+   
  
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D col)
     {
 
-        if(other.gameObject.CompareTag("Player"))
+        if(col.gameObject.CompareTag("Player"))
         {
             
-            other.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+            col.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
             
         }
         
     }
 
+     public void TakeDamage(float damageAmount)
+    {
+        currentHealth -= damageAmount;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        // Add death logic here
+        Destroy(gameObject);
+    }
 
 
 

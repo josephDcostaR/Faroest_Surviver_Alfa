@@ -125,6 +125,11 @@ public class Map_Controller : MonoBehaviour
 
     void chunkOptimizer()
     {
+         if (Player == null)
+       {
+        return;
+       }
+
         optimizerCooldown -= Time.deltaTime;
 
         if(optimizerCooldown <= 0f)
@@ -149,7 +154,5 @@ public class Map_Controller : MonoBehaviour
             }
         }
     }
-
-
 }
 
