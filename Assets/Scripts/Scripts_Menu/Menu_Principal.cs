@@ -9,6 +9,7 @@ public class Menu_Principal : MonoBehaviour
    [SerializeField] private string nomeDoLevelDeJogo;
    [SerializeField] private GameObject painelMenuInicial;
    [SerializeField] private GameObject painelOpcoes;
+   [SerializeField] private GameObject painelCredits;
    
    public void jogar(){
 
@@ -25,6 +26,19 @@ public class Menu_Principal : MonoBehaviour
         painelOpcoes.SetActive(false);
         painelMenuInicial.SetActive(true);
    }
+
+   public void abrirCreditos() 
+   {
+    painelMenuInicial.SetActive(false);
+    painelOpcoes.SetActive(false);
+    painelCredits.SetActive(true);
+   }
+
+  public void fecharCreditos()
+{
+    painelCredits.SetActive(false);
+    painelOpcoes.SetActive(true);
+  }
 
     public void sairDoJogo() {
         Debug.Log("Sai");

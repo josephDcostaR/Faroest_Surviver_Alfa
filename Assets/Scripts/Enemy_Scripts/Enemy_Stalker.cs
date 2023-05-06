@@ -65,9 +65,9 @@ public class Enemy_Stalker : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
-        // Add death logic here
+        controller_pontuacao.Pontucao++;
         Destroy(gameObject);
     }
 

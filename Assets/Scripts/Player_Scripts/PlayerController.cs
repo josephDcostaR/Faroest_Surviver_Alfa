@@ -3,103 +3,94 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public float speed = 5.0f;
 
-    public float speed = 5.0f; 
- 
     [HideInInspector]
     public float lastHorizontalVector;
     [HideInInspector]
     public float lastVerticalVector;
     [HideInInspector]
-     public Vector2 moveDir;
-      [HideInInspector]
+    public Vector2 moveDir;
+    [HideInInspector]
     public Vector2 lastMovedVector;
-
     Rigidbody2D rb;
- 
     public float maxHealth;
     public float currentHealth;
 
-    
-     [Header("I-Frame")]
-     public float invincibilityDuration;
-     float invincibilityTimer;
+    [Header("I-Frame")]
+    public float invincibilityDuration;
+    float invincibilityTimer;
+    bool isInvicible;
+    public VirtualJoyStick virtualJoyStick;
 
-     bool isInvicible;
-
-   
-
-    void Start() {
+    void Start()
+    {
 
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2(1, 0f);
+        controller_pontuacao.Pontucao = 0;
 
     }
-    
+
     void Update()
     {
-    if (invincibilityTimer > 0)
-    {
-        invincibilityTimer -= Time.deltaTime;
-    }
-    else if (isInvicible)
-    {
-        isInvicible = false;
+
+
+        if (invincibilityTimer > 0)
+        {
+            invincibilityTimer -= Time.deltaTime;
+        }
+        else if (isInvicible)
+        {
+            isInvicible = false;
         }
 
-      InputManagement();
-                    
+        InputManagement();
+
     }
 
-   void FixedUpdate() 
+    void FixedUpdate()
     {
-        move();    
+        move();
     }
 
     void InputManagement()
     {
-         float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        moveDir = new Vector2(moveX, moveY).normalized;
-
-        if(moveDir.x != 0)
+        if (virtualJoyStick != null)
         {
-            lastHorizontalVector = moveDir.x;
-            lastMovedVector = new Vector2(lastHorizontalVector, 0f);
-        }
+            float moveX = virtualJoyStick.axis.x;
+            float moveY = virtualJoyStick.axis.y;
 
-        if (moveDir.y != 0)
-        {
-            lastVerticalVector = moveDir.y;
-            lastMovedVector = new Vector2(0f, lastVerticalVector);
-        }
+            moveDir = new Vector2(moveX, moveY).normalized;
 
-        if(moveDir.x != 0 && moveDir.y != 0)
-        {
-            lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector);
-        }
+            if (moveDir.magnitude > 0) // Verifica se houve movimentação
+            {
+                lastMovedVector = moveDir; // Salva a última direção movimentada
+            }
 
+
+        }
     }
 
     void move()
     {
-         rb.velocity = new Vector2(moveDir.x * speed, moveDir.y * speed);
+        rb.velocity = new Vector2(moveDir.x * speed, moveDir.y * speed);
+
     }
 
-    
-     public void TakeDamage(float dmg)
+    public void TakeDamage(float dmg)
     {
         if (!isInvicible)
         {
-             currentHealth -= dmg;
+            currentHealth -= dmg;
 
-             invincibilityTimer = invincibilityDuration;
-             isInvicible = true;
+            invincibilityTimer = invincibilityDuration;
+            isInvicible = true;
 
             if (currentHealth <= 0)
             {
@@ -107,19 +98,21 @@ public class PlayerController : MonoBehaviour
                 Die();
             }
         }
-       
+
     }
 
-    public void Die(){
+    public void Die()
+    {
+       GoToMenuScene();
+
         Destroy(gameObject);
        
     }
 
-
-    
-
-   
-
+    private void GoToMenuScene()
+    {
+        SceneManager.LoadScene(1);
+    }
 
 }
 

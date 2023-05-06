@@ -109,15 +109,16 @@ public class Projectile_Weapon_Behaviour : MonoBehaviour
 }
 
 
-    protected virtual void OnTriggerEnter2D(Collider2D col) 
+   protected virtual void OnTriggerEnter2D(Collider2D col) 
+{
+    if (col.CompareTag("Enemy"))
     {
-        if (col.CompareTag("Enemy"))
-        {
-            col.GetComponent<Enemy_Stalker>().TakeDamage(currentDamage);
-            reducePierce();
-        }
-        
+        col.GetComponent<Enemy_Stalker>().TakeDamage(currentDamage);
+        Enemy_Stalker enemy = col.GetComponent<Enemy_Stalker>();
+        enemy.Die();
+        reducePierce();
     }
+}
 
     void reducePierce()
     {
