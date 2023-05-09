@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 898083c99f03a6046bf345ffa782f25c, type: 3}
-  m_Name: Enem_Slime
+  m_Name: Enem_Walker
   m_EditorClassIdentifier: 
   moveSpeed: 2
   maxHealth: 5

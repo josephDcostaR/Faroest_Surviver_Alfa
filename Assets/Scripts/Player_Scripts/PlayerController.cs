@@ -4,10 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 
 public class PlayerController : MonoBehaviour
 {
+  
+//Movimentação
     public float speed = 5.0f;
 
     [HideInInspector]
@@ -15,18 +17,25 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public float lastVerticalVector;
     [HideInInspector]
-    public Vector2 moveDir;
-    [HideInInspector]
     public Vector2 lastMovedVector;
+
+    [HideInInspector]
+    public Vector2 moveDir;
     Rigidbody2D rb;
+
+//Vida
     public float maxHealth;
     public float currentHealth;
 
+//Invencibilidade
     [Header("I-Frame")]
     public float invincibilityDuration;
     float invincibilityTimer;
     bool isInvicible;
+
+//JoyStick-Virtual
     public VirtualJoyStick virtualJoyStick;
+
 
     void Start()
     {
@@ -54,9 +63,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
+//Movimentacao
     void FixedUpdate()
     {
-        move();
+        Move();
     }
 
     void InputManagement()
@@ -72,17 +82,26 @@ public class PlayerController : MonoBehaviour
             {
                 lastMovedVector = moveDir; // Salva a última direção movimentada
             }
+            if(moveDir.x != 0)
+            {
+                lastHorizontalVector = moveDir.x;
+            }
+             if(moveDir.x != 0)
+            {
+                lastVerticalVector = moveDir.y;
+            }
 
 
         }
     }
 
-    void move()
+    void Move()
     {
         rb.velocity = new Vector2(moveDir.x * speed, moveDir.y * speed);
 
     }
 
+//Combate
     public void TakeDamage(float dmg)
     {
         if (!isInvicible)
@@ -98,20 +117,18 @@ public class PlayerController : MonoBehaviour
                 Die();
             }
         }
-
     }
 
+//Morte
     public void Die()
     {
        GoToMenuScene();
-
-        Destroy(gameObject);
-       
+        Destroy(gameObject);   
     }
 
     private void GoToMenuScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 }

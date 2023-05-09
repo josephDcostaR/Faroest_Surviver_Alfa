@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 32x32-bat-sprite_0
+      name: bat-enemy_0
       rect:
         serializedVersion: 2
         x: 3
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccd3216b59d544641876567a0805a1df
-      internalID: -1704445916
+      spriteID: 94ad9cb58ecf15f4987386fa6a0df123
+      internalID: 1317036246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_1
+      name: bat-enemy_1
       rect:
         serializedVersion: 2
         x: 35
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcecfb7fdbbcbc74fa284f4a37c46772
-      internalID: -1433702010
+      spriteID: 3f43f0e3babd27f46bdc33bc89e500bc
+      internalID: -774799574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_2
+      name: bat-enemy_2
       rect:
         serializedVersion: 2
         x: 66
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e59abfdf2b1fd474a8f07d70e7f0a05b
-      internalID: 196315368
+      spriteID: 85ee2823eea845344933899e7a33625a
+      internalID: 1092473125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_3
+      name: bat-enemy_3
       rect:
         serializedVersion: 2
         x: 97
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff996d0070fc9ea46817160aed48933c
-      internalID: 863364644
+      spriteID: 01013a136b0c4b14c91c9f63d0780c05
+      internalID: 564414471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_4
+      name: bat-enemy_4
       rect:
         serializedVersion: 2
         x: 7
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b73cd047b2a554b439b19e84a7fea83f
-      internalID: -2003606063
+      spriteID: dac932ee8fac8214098b4f0df709b332
+      internalID: -491269130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_5
+      name: bat-enemy_5
       rect:
         serializedVersion: 2
         x: 41
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40288d5443df6d4498b068b716b835cd
-      internalID: 3462420
+      spriteID: 42e7c0ed1e1351c4e81847849656a1d9
+      internalID: 1725533786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_6
+      name: bat-enemy_6
       rect:
         serializedVersion: 2
         x: 73
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddb390c190e41894a849caaf01dee2d8
-      internalID: -362802910
+      spriteID: 0fb6e56586e3da24db413a1343a81854
+      internalID: 2124613813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_7
+      name: bat-enemy_7
       rect:
         serializedVersion: 2
         x: 107
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67ef9694cbb187f49939684babdf5f74
-      internalID: 456631773
+      spriteID: e5fa8c92af32efe44b57d2e7318afee3
+      internalID: -1377395125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_8
+      name: bat-enemy_8
       rect:
         serializedVersion: 2
         x: 35
@@ -310,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1604ab09412230e41a313203f9046de1
-      internalID: -1164778837
+      spriteID: 8f223fd47c658a047a8c3cd0a758f42a
+      internalID: 481792030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_9
+      name: bat-enemy_9
       rect:
         serializedVersion: 2
         x: 66
@@ -331,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3447ef6ebbf46764699b6da10546d0aa
-      internalID: 361659554
+      spriteID: 6a5d2bd1f831cf44baedafa652899266
+      internalID: 1705373611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_10
+      name: bat-enemy_10
       rect:
         serializedVersion: 2
         x: 97
@@ -352,14 +352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3e5baa0773d8a54eb81fc3d1588636f
-      internalID: 1516079507
+      spriteID: 5b9747d2ce013784686268561891e59b
+      internalID: 643007154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_11
+      name: bat-enemy_11
       rect:
         serializedVersion: 2
         x: 4
@@ -373,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c2bee69847c6564fb5ccd0b5494924e
-      internalID: 1112122296
+      spriteID: ab3efe182da367e4d8480e263772b700
+      internalID: 1092246074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_12
+      name: bat-enemy_12
       rect:
         serializedVersion: 2
         x: 6
@@ -394,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bad9fd9a52c88114eb4480374891ec69
-      internalID: 518419336
+      spriteID: b238844050760424a80d823ffa22499a
+      internalID: 402548135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_13
+      name: bat-enemy_13
       rect:
         serializedVersion: 2
         x: 38
@@ -415,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 621bdc9602016024f9f2ad767b1dc1a0
-      internalID: -1805636638
+      spriteID: 88698261176791c43bf90362f1fd6541
+      internalID: -1473311135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_14
+      name: bat-enemy_14
       rect:
         serializedVersion: 2
         x: 70
@@ -436,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7520900af5fc0bf44907783265e509fc
-      internalID: -1265791834
+      spriteID: 15930ba59ec99244a8b95bc0fae89b04
+      internalID: 1405602361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 32x32-bat-sprite_15
+      name: bat-enemy_15
       rect:
         serializedVersion: 2
         x: 102
@@ -457,8 +457,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9fc4ad177436046bc3309ca9fd55e5
-      internalID: -2045671596
+      spriteID: fd6fbec70d46b54479dd8cb5dab655cb
+      internalID: 1872671709
       vertices: []
       indices: 
       edges: []
@@ -474,22 +474,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      32x32-bat-sprite_13: -1805636638
-      32x32-bat-sprite_5: 3462420
-      32x32-bat-sprite_3: 863364644
-      32x32-bat-sprite_6: -362802910
-      32x32-bat-sprite_14: -1265791834
-      32x32-bat-sprite_9: 361659554
-      32x32-bat-sprite_12: 518419336
-      32x32-bat-sprite_15: -2045671596
-      32x32-bat-sprite_10: 1516079507
-      32x32-bat-sprite_1: -1433702010
-      32x32-bat-sprite_4: -2003606063
-      32x32-bat-sprite_11: 1112122296
-      32x32-bat-sprite_0: -1704445916
-      32x32-bat-sprite_2: 196315368
-      32x32-bat-sprite_7: 456631773
-      32x32-bat-sprite_8: -1164778837
+      bat-enemy_2: 1092473125
+      bat-enemy_6: 2124613813
+      bat-enemy_5: 1725533786
+      bat-enemy_9: 1705373611
+      bat-enemy_13: -1473311135
+      bat-enemy_0: 1317036246
+      bat-enemy_14: 1405602361
+      bat-enemy_3: 564414471
+      bat-enemy_8: 481792030
+      bat-enemy_12: 402548135
+      bat-enemy_15: 1872671709
+      bat-enemy_11: 1092246074
+      bat-enemy_7: -1377395125
+      bat-enemy_1: -774799574
+      bat-enemy_4: -491269130
+      bat-enemy_10: 643007154
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
