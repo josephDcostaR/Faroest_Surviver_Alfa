@@ -8,8 +8,10 @@ using UnityEngine.UI;
 public class LifeController : MonoBehaviour
 {
 
+    public Image maxLifeImage;
+
     public Image currentLifeImage; // Imagem da vida atual
-    public Image maxLifeImage; // Imagem da vida máxima
+    // Imagem da vida máxima
 
     private PlayerController player; 
 
@@ -22,9 +24,16 @@ public class LifeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentLifeImage.fillAmount = player.currentHealth / player.maxHealth;
+       UpdateLifeBar();
     }
-   
+
+     void UpdateLifeBar()
+    {
+        float fillAmount = player.currentHealth / player.maxHealth;
+        currentLifeImage.transform.localScale = new Vector3(fillAmount, 1f, 1f);
+    }
+
+    
 }
 
 

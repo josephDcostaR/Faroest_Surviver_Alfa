@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
 
 //Vida
-    public float maxHealth;
-    public float currentHealth;
+    public float currentHealth;//Vida Atual
+    public float maxHealth;//vida total
+    
 
 //Invencibilidade
     [Header("I-Frame")]

@@ -645,7 +645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: -419.00003}
+  m_AnchoredPosition: {x: -463, y: -438}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264241327
@@ -1191,7 +1191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somStatus: 1
   sound: {fileID: 1349801501}
-  fundoMusical: {fileID: 1349801502}
+  fundoMusical: {fileID: 0}
+  musicaMenu: {fileID: 8300000, guid: 3ba2f97fb7a71de499af478450561c43, type: 3}
+  musicaGame: {fileID: 8300000, guid: 306b364f3d7eef1499c4bfc27db0463d, type: 3}
   somLigadoSprite: {fileID: 21300000, guid: 95723c3911237434da9c9df1281c32fd, type: 3}
   somDesligadoSprite: {fileID: 21300000, guid: 76074cd870173274f926e3a745872d5b, type: 3}
   muteImage: {fileID: 749723967}
@@ -2782,7 +2784,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Assets de terceiros\r\nmenu \r\n-Desenvolvedor Unity\r\n-https://www.youtube.com/watch?v=yIaAE9bLxXI&t=488s\r\n\r\nParallax
-    Background\r\n-Behance\r\n-https://br.pinterest.com/pin/976647869172842682/\r\n\r\nPlayer\r\n-Elthen's\r\n-https://elthen.itch.io/pixel-art-adventurer-sprites\r\n\r\nCenario\r\n-Cainos\r\n-https://cainos.itch.io/pixel-art-top-down-basic\r\n\r\nInimigo\r\n-bagzie\r\n-https://opengameart.org/content/bat-sprite\r\n\r\nArma\r\n-Admurin\r\n-https://opengameart.org/content/admurins-armory\r\n"
+    Background\r\n-Behance\r\n-https://br.pinterest.com/pin/976647869172842682/\r\n\r\nPlayer\r\n-Elthen's\r\n-https://elthen.itch.io/pixel-art-adventurer-sprites\r\n\r\nCenario\r\n-Cainos\r\n-https://cainos.itch.io/pixel-art-top-down-basic\r\n\r\nInimigo\r\n-bagzie\r\n-https://opengameart.org/content/bat-sprite\r\n\r\nArma\r\n-Admurin\r\n-https://opengameart.org/content/admurins-armory\r\n\nMusicas\n-
+    f\xE1bio Sinezio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c8ed0744f0e5748428f72a80425d89d1, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: c8ed0744f0e5748428f72a80425d89d1, type: 2}
@@ -3161,7 +3164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1349801503}
-  - component: {fileID: 1349801502}
+  - component: {fileID: 1349801504}
   m_Layer: 0
   m_Name: sound
   m_TagString: Untagged
@@ -3169,7 +3172,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1349801502
+--- !u!4 &1349801503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349801501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 596.1198, y: -214.94, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1349801504
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3179,11 +3197,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 56868b6e7f9cb8949a13301f495eab93, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3ba2f97fb7a71de499af478450561c43, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3265,21 +3283,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &1349801503
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349801501}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 596.1198, y: -214.94, z: 90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1368957501
 GameObject:
   m_ObjectHideFlags: 0
